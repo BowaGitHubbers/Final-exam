@@ -103,6 +103,7 @@
             <th>Deadline</th>
             <th>Status</th>
             <th>Payment Status</th>
+            <th>Number</th>
           </tr>
         </thead>
         <tbody>
@@ -158,13 +159,17 @@
             addressCell.textContent = item.gender;
 
             const zodiacsignCell = document.createElement('td');
-            zodiacsignCell.textContent = item.number;
+            zodiacsignCell.textContent = item.zodiacsign;
+
+           const numberCell = document.createElement('td');
+            numberCell.textContent = item.number;
 
             row.appendChild(rollCell);
             row.appendChild(nameCell);
             row.appendChild(addressCell);
             row.appendChild(genderCell);
-            row.appendChild(zodiacsignCell);
+            row.appendChild(zodiacsignCell)
+            row.appendChild(numberCell);
 
             tbody.appendChild(row);
           });
